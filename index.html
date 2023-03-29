@@ -18,13 +18,13 @@
                 <div class="col">
                     <div class="card">
                         
-                        <img :src="games.images" alt="games_image" >
+                        <img :class="index === activeImage ? 'active' : '' " :src="image" alt="games_image" v-for="(image, index) in games.images" @click="changeImage(index)">
                         
-                            <h3>
-                                {{ games.title }} 
+                            <h3 :class="index === activeTitle ? 'active' : '' " v-for="(title, index) in games.titles" @click="activeTitle(index)">
+                              
                             </h3>
-                            <p>
-                                {{ games.text }}
+                            <p :class="index === activeText ? 'active' : '' " v-for="(text, index) in games.texts" @click="activeText(index)">
+                               
                             </p>
                         
                         

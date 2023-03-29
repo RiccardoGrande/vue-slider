@@ -10,6 +10,8 @@ createApp({
   data() {
     return {
       activeImage: 0,
+      activeTitle: 0,
+      activeText: 0,
       games:{
 
         images: [
@@ -20,7 +22,7 @@ createApp({
             './assets/img/04.webp',
             './assets/img/05.webp'
         ],
-        title: [
+        titles: [
 
             'Marvel\'s Spiderman Miles Morale',
             'Ratchet & Clank: Rift Apart',
@@ -28,7 +30,7 @@ createApp({
             'Stray',
             "Marvel's Avengers",
         ],
-        text: [
+        texts: [
 
             'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
             'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
@@ -39,12 +41,11 @@ createApp({
 
         
     }
-
-    console.log(games)
     
 }
 },
 methods: {
+    
 
     next(){
         this.activeImage++
@@ -52,6 +53,22 @@ methods: {
 
             activeImage = 0;
         }
+        console.log(this.games)
+
+        this.activeTitle++
+        if ( activeTitle > titles.length - 1) {
+
+            activeTitle = 0;
+        }
+        console.log(this.games)
+
+        
+        this.activeText++
+        if ( activeText > texts.length - 1) {
+
+            activeText = 0;
+        }
+        console.log(this.games)
     },
     prev(){
 
@@ -60,6 +77,24 @@ methods: {
 
             activeImage = 4;
         }
+
+        this.activeTitle--
+        if ( activeTitle < 0 ) {
+
+            activeTitle = 4;
+        }
+
+        this.activeText--
+        if ( activeText < 0 ) {
+
+            activeText = 4;
+        }
+    },
+    changeImage(index){
+
+        this.activeImage = index,
+        this.activeTitle = index,
+        this.activeText = index
     }
 }
 
