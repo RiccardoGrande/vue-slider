@@ -46,7 +46,7 @@ createApp({
 },
 methods: {
     
-
+   
     next(){
         this.activeImage++
         if ( activeImage > images.length - 1) {

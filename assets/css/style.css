@@ -33,3 +33,10 @@ img{
 img:not(.active) {
     display: none;
 }
+
+#buttons{
+
+    display: flex;
+    justify-content: space-around;
+
+}
