@@ -9,32 +9,33 @@
 </head>
 <body>
 
-    <div id="app"></div>
+    <div id="app">
     
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col">
-                <div class="card">
-                    
-                    <img :src="games.images" alt="games_image" >
-                    
-                        <h3>
-                            {{ games.title }} 
-                        </h3>
-                        <p>
-                            {{ games.text }}
-                        </p>
-                    
-                    
+                <div class="col">
+                    <div class="card">
+                        
+                        <img :src="games.images" alt="games_image" >
+                        
+                            <h3>
+                                {{ games.title }} 
+                            </h3>
+                            <p>
+                                {{ games.text }}
+                            </p>
+                        
+                        
+                    </div>
                 </div>
+
+                <button @click="prev">Prev</button>
+                <button @click="next">Next</button>
             </div>
 
-            <button class="prev">Prev</button>
-            <button class="next">Next</button>
         </div>
-
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
