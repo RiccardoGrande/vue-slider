@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+
+    <div id="app"></div>
     
     <div class="container">
 
@@ -16,7 +18,7 @@
             <div class="col">
                 <div class="card">
                     
-                    <img src="{{}}" alt="" >
+                    <img :src="games.images" alt="" >
                     
                         <h3 class="${i === activeImage ? 'active' : ''}">
                             ${thisImage.title} 
@@ -34,7 +36,8 @@
         </div>
 
     </div>
-
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
