@@ -48,12 +48,13 @@ methods: {
     
    
     next(){
+        console.log(this.games)
         this.activeImage++
         if ( activeImage > images.length - 1) {
 
             activeImage = 0;
         }
-        console.log(this.games)
+        
 
         this.activeTitle++
         if ( activeTitle > titles.length - 1) {
@@ -72,6 +73,8 @@ methods: {
     },
     prev(){
 
+        console.log(this.games)
+        
         this.activeImage--
         if ( activeImage < 0 ) {
 
