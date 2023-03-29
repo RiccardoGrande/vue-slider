@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array object Carousel</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col">
+                <div class="card">
+                    
+                    <img class="${i === activeImage ? 'active' : ''}" src="${thisImage.image}" alt="" >
+                    
+                        <h3 class="${i === activeImage ? 'active' : ''}">
+                            ${thisImage.title} 
+                        </h3>
+                        <p class="${i === activeImage ? 'active' : ''}">
+                            ${thisImage.text}
+                        </p>
+                    
+                    
+                </div>
+            </div>
+
+            <button class="prev">Prev</button>
+            <button class="next">Next</button>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>
