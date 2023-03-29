@@ -35,35 +35,24 @@ createApp({
             "Grab all of your friends and drop into Epic Games Fortnite, a massive 100 - player face - off that combines looting, crafting, shootouts and chaos.",
             'Lost, injured and alone, a stray cat must untangle an ancient mystery to escape a long-forgotten city',
             'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
-        ],
+        ]
 
-
-      }
+        console.log(games);
     }
-  }
+    
+}
+},
+methods: {
+    
+}
+
 }).mount('#app')
 
 
 
-console.log(games);
-
-const rowEl = document.querySelector('.row')
-
-let activeImage = 0;
-
-for (let i = 0; i < images.length; i++) {
-    const thisImage = images[i];
-    console.log(thisImage);
-    //Organizzare i singoli membri in card/schede
-    const markup = `
-        `
-    rowEl.innerHTML += markup
-
-}
 
 
-
-
+/* 
 // selezioniamo tutte le slide
 const slideImagesElements = document.querySelectorAll('.col > .card ')  
     console.log(slideImagesElements);
@@ -132,4 +121,4 @@ prevEl.addEventListener('click', function () {
   console.log(nextImage);
   nextImage.classList.add('active')
 
-})
+}) */

@@ -18,13 +18,13 @@
             <div class="col">
                 <div class="card">
                     
-                    <img :src="games.images" alt="" >
+                    <img :src="games.images" alt="games_image" >
                     
-                        <h3 class="${i === activeImage ? 'active' : ''}">
-                            ${thisImage.title} 
+                        <h3>
+                            {{ games.title }} 
                         </h3>
-                        <p class="${i === activeImage ? 'active' : ''}">
-                            ${thisImage.text}
+                        <p>
+                            {{ games.text }}
                         </p>
                     
                     
@@ -36,7 +36,7 @@
         </div>
 
     </div>
-    
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
